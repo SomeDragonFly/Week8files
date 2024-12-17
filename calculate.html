@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        
+        <h1>TempConvert</h1>
+        <div id="toCel"></div>
+        <div id="toFah"></div>
+
+        <script>
+            function toCel(fahrenheit) {
+                let value = (fahrenheit - 32) * 5/9
+                return value.toFixed(2)
+            }
+            
+            function toFah() {
+            let value = [(celsius * 9) + 32] / 5
+            return value.toFixed(2)
+            }
+
+            function display(elementid, id) {
+                document.getElementById().innerHTML = value
+
+            }
+
+            toCel(150)
+            display("toCelsius", toCel(150))
+            toFah(72)
+            display("toFahrenheit", toFah(72))
+
+
+            /*function sayHello(username, userlastname) {
+                return "Hello" + username + userlastname
+            }
+
+            /*function getage(){
+                return 17
+            }
+
+            let input = prompt("Enter Age:")
+            sayhello(input, "TSS")*/
+        </script>
+
+    </body>
+</html>

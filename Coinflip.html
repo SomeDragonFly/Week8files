@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <h1>Coin flip Guessing Game</h1>
+        <div id="result"></div>
+
+        <script>
+            let round = prompt("How many rounds");
+            for (var i = 0; i < round; i++) {
+                var ans = prompt("Heads or tails");
+                var r_ans = "";
+                if (Math.floor(Math.random() * 10) <= 4) {
+                    r_ans = "Heads";
+                } else {
+                    r_ans = "Tails";
+                }
+
+                var message = "You guessed: " + ans + ". Result: " + (ans === r_ans ? "Correct" : "Incorrect") + "<br>";
+                document.getElementById("result").innerHTML += message;
+            }
+        </script>
+
+    </body>
+</html>

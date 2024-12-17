@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <h1>Food Cost Checker</h1>
+        <div id="result"></div>
+        <div id="price"></div>
+        <script>
+            let n = prompt("Food Quantity")
+            let sum = 0
+
+            for(var i = 1; i <= n; i++) {
+                let price = prompt("Enter price of item " + i + ": ")
+                sum = parseInt(sum) + parseInt(price)
+                document.getElementById("price").innerHTML += "Cost of dish " + i + ": " + sum + "$" + "<br>"
+            }
+            document.getElementById("result").innerHTML = "Total Food Cost:" + sum + "$"
+            
+        </script>
+
+    </body>
+</html>

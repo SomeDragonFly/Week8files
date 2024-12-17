@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            width: 300px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .error {
+            background-color: #ffcccc;
+            color: #d8000c;
+            border: 1px solid #d8000c;
+        }
+
+        .gpa {
+            background-color: #ccffcc;
+            color: #4caf50;
+            border: 1px solid #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grading Program</h1>
+    <div id="result"></div>
+    <script>
+        let score = prompt("Enter your test score (0-100):");
+        score = parseFloat(score);
+
+        if (isNaN(score) || score < 0 || score > 100) {
+            document.getElementById("result").innerHTML = "Please enter a score between 0 and 100.";
+            document.getElementById("result").className = "error";
+        } else {
+            let gpaMessage;
+            if (score >= 80) {
+                gpaMessage = "GPA = 4.0";
+            } else if (score >= 70) {
+                gpaMessage = "GPA = 3.0";
+            } else if (score >= 60) {
+                gpaMessage = "GPA = 2.0";
+            } else if (score >= 50) {
+                gpaMessage = "GPA = 1.0";
+            } else {
+                gpaMessage = "GPA = 0.0";
+            }
+            document.getElementById("result").innerHTML = gpaMessage;
+            document.getElementById("result").className = "gpa";
+        }
+    </script>
+</body>
+</html>
